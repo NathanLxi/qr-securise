@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Accès sécurisé</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: #f5f5f5;
+    }
+
+    .container {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    input {
+      padding: 10px;
+      font-size: 16px;
+      margin-top: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      width: 200px;
+    }
+
+    button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      background-color: #0072b1;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #005c8a;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Page protégée</h2>
+    <p>Veuillez entrer le code pour accéder :</p>
+    <input type="password" id="code" placeholder="Code d'accès">
+    <br>
+    <button onclick="verifierCode()">Valider</button>
+  </div>
+
+  <script>
+    function verifierCode() {
+      const code = document.getElementById('code').value;
+      if (code === "TON_MOT_DE_PASSE") {
+        window.location.href = "https://www.linkedin.com/in/TON_LIEN_LINKEDIN";
+      } else {
+        alert("Code incorrect.");
+      }
+    }
+  </script>
+</body>
+</html>
